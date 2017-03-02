@@ -89,7 +89,7 @@ bio.display = function() {
         bio.skills.forEach((item) => {
             formattedSkill = HTMLskills.replace("%data%", item);
             $("#skills").append(formattedSkill);
-        })
+        });
     }
 };
 
@@ -141,10 +141,10 @@ education.display = function() {
             $(".education-entry:last").append(HTMLschoolDates.replace("%data%", school.dates));
             $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", school.location));
             $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", school.majors[0]));
-        })
+        });
 
         // Renders the courses
-        $("#education").append('<br/>')
+        $("#education").append('<br/>');
         $("#education").append(HTMLonlineClasses);
         education.onlineCourses.forEach((course) => {
             $("#education").append("<div class='course-entry'><hr/></div>");
@@ -153,7 +153,7 @@ education.display = function() {
             $(".course-entry:last").append(HTMLonlineSchool.replace('%data%', course.school));
             $(".course-entry:last").append(HTMLonlineDates.replace('%data%', course.dates));
             $(".course-entry:last").append(HTMLonlineURL.replace('%data%', course.url));
-        })
+        });
     }
 };
 
@@ -189,7 +189,7 @@ projects.display = function() {
         if (project.images.length > 0) {
             $(".project-entry:last").append(HTMLprojectImage.replace("%data%", project.images[0]));
         }
-    })
+    });
 
 };
 
